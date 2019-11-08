@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "vn.pops.gatekeeper"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "gateway",
+    "baseName": "Gateway",
+    "packageName": "vn.pops.gatekeeper",
+    "packageFolder": "vn/pops/gatekeeper",
+    "serverPort": "8888",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZmViZWJmNjQwYTE2MWE1NjQ1N2ZkMTExNjM1YjBhYTdmMGFlODM0NjA2YTNlYTlmYjA5OWE1N2M4NjEzNDBmZTIzZjBlY2MwZmQxOTc4MjU0MmNkMjZlNDk4OWQzOWNjNDA1OTAzZmJiODQ3OTMyYzIzZTA1OGU0NDBmYzg3NGQ=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

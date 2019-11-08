@@ -1,0 +1,99 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration is used for unit/integration tests.
+#
+# More information on profiles: https://www.jhipster.tech/profiles/
+# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: TaskService
+    instanceId: TaskService:${spring.application.instance-id:${random.value}}
+
+spring:
+  application:
+    name: TaskService
+  data:
+    mongodb:
+      host: localhost
+      port: 0
+      database: TaskService
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
+  mail:
+    host: localhost
+  main:
+    allow-bean-definition-overriding: true
+  messages:
+    basename: i18n/messages
+  mvc:
+    favicon:
+      enabled: false
+  task:
+    execution:
+      thread-name-prefix: task-service-task-
+      pool:
+        core-size: 1
+        max-size: 50
+        queue-capacity: 10000
+    scheduling:
+      thread-name-prefix: task-service-scheduling-
+      pool:
+        size: 1
+  thymeleaf:
+    mode: HTML
+
+server:
+  port: 10344
+  address: localhost
+
+# ===================================================================
+# JHipster specific properties
+#
+# Full reference is available at: https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+
+jhipster:
+  clientApp:
+    name: 'taskServiceApp'
+  logging:
+    # To test json console appender
+    use-json-format: true # By default, logs are in Json format
+    # To test logstash appender
+    logstash:
+      enabled: true
+      host: localhost
+      port: 5000
+      queue-size: 512
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+        base64-secret: M2YxNDJiMDg2Y2Q5MGE4OWFiZThhYjJlMDg2ODgwZTgzMDBlNjZlMzFhNTBiZjA2MzJiNjg3YjNmYTBjZDg3YTkzM2M1NGQwNWQzYzk0M2QzMDdjZjAxNjRkOWMxNzM2ODU4ODFlMjhmNDI4YjJlZDQwZDBjYTliZWU2NzViZDg=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
+  metrics:
+    logs: # Reports metrics in the logs
+      enabled: true
+      report-frequency: 60 # in seconds
+
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+
+# application:

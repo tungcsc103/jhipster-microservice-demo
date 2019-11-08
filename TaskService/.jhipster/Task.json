@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "TaskService",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expireDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "TaskStatus",
+            "fieldValues": "NEW,IN_PROGRESS,DONE,EXPIRE"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "task",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll",
+    "microserviceName": "TaskService"
+}

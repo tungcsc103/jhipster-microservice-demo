@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "vn.pops.account"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "AccountService",
+    "packageName": "vn.pops.account",
+    "packageFolder": "vn/pops/account",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2E0YWRiNTUzOTYwM2U5ZTZkZjgxM2Y2YThkMmE3MzUwYTQ4ODE5ZmI5MWE5ZjI4YTdkMDA1NjkxZDBjNGYzMzc3MWMxNjkyZTM1ZjkxMDY2NDNlYzgyNDZiYjVhY2VhNDdlOGE2YjkzNDFmMmVkOWRlNzg0OGQzMWQxZWIyNTM=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

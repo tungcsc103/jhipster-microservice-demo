@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  accountservice-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.3
+    # volumes:
+    #     - ~/volumes/jhipster/AccountService/elasticsearch/:/usr/share/elasticsearch/data/
+    ports:
+      - 9200:9200
+    environment:
+      - 'ES_JAVA_OPTS=-Xms1024m -Xmx1024m'
+      - 'discovery.type=single-node'

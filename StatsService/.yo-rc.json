@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "vn.pops.statsservive"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "StatsService",
+    "packageName": "vn.pops.statsservive",
+    "packageFolder": "vn/pops/statsservive",
+    "serverPort": "8083",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NjU1NzZmM2IyNzYzYWE5OGU0MmIwNDdkYjdiY2UwZTM0ZWM5NzEyYmQzZGY5ZjcyZjlhYmU3Njg4MDNkZWFjYThiY2RkMWZiNjVlNGE3N2NhMDZkNzYwYzg5MTljMTZmOGYyMjNmYjkyNzI3ODAwMTU3NGIzNmQ4ZjYwM2E0MDM=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "vn.pops.taskservice"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "TaskService",
+    "packageName": "vn.pops.taskservice",
+    "packageFolder": "vn/pops/taskservice",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2YxNDJiMDg2Y2Q5MGE4OWFiZThhYjJlMDg2ODgwZTgzMDBlNjZlMzFhNTBiZjA2MzJiNjg3YjNmYTBjZDg3YTkzM2M1NGQwNWQzYzk0M2QzMDdjZjAxNjRkOWMxNzM2ODU4ODFlMjhmNDI4YjJlZDQwZDBjYTliZWU2NzViZDg=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

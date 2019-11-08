@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "vn.pops.analyticservice"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "AnalyticService",
+    "packageName": "vn.pops.analyticservice",
+    "packageFolder": "vn/pops/analyticservice",
+    "serverPort": "8084",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "cassandra",
+    "devDatabaseType": "cassandra",
+    "prodDatabaseType": "cassandra",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2U3YTE4ZjYwNjM1MjkyNzkxMTRjMDRlYWM4YjQ2ZTdkNWY2ODI3YmQ5MzExMDFjZjgzNzM0NGRkYzJhOTEwZjkzNTlmNzlkMDdiMDAwNDQwMzRlNDNjMTIyNjQ1ZWMxZTJmYzk1YjliMWViMTkwODM0MGExNThkMGY4M2U3Y2M=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

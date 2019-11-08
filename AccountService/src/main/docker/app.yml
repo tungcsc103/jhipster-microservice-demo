@@ -1,0 +1,46 @@
+version: '2.4'
+services:
+  accountservice-app:
+    image: accountservice
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_MONGODB_URI=mongodb://accountservice-mongodb:27017
+      - SPRING_DATA_MONGODB_DATABASE=AccountService
+      # - ELASTICSEARCH_HOST=127.0.0.1
+      # - ELASTICSEARCH_PORT=9200
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
+      - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+      - JHIPSTER_SLEEP=10 # gives time for other services to boot before the application
+    ports:
+      - 8081:8081
+    depends_on:
+      - accountservice-mongodb
+      # - accountservice-elasticsearch
+    networks:
+      - ms-network
+
+  accountservice-mongodb:
+    extends:
+      file: mongodb.yml
+      service: accountservice-mongodb
+    networks:
+      - ms-network
+    ports:
+      - 27017:27017
+
+  # accountservice-elasticsearch:
+  #   extends:
+  #     file: elasticsearch.yml
+  #     service: accountservice-elasticsearch
+  #   networks:
+  #     - network1
+  #   ports:
+  #     - 9200:9200
+
+networks:
+    ms-network:
+        name: my-app-net
