@@ -1,0 +1,30 @@
+version: '2.4'
+services:
+    kafka:
+        extends:
+            file: kafka.yml
+            service: kafka
+        environment:
+        - KAFKA_ADVERTISED_HOST_NAME=kafka
+        - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+        networks:
+            - ms-network
+    zookeeper:
+        extends:
+            file: kafka.yml
+            service: zookeeper
+        networks:
+            - ms-network
+    jhipster-registry:
+        extends:
+            file: jhipster-registry.yml
+            service: jhipster-registry
+        networks:
+            - ms-network
+        environment:
+        - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native
+        - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS=file:./central-config/docker-config/
+
+networks:
+    ms-network:
+        name: my-app-net
