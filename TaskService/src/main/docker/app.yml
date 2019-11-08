@@ -13,13 +13,18 @@ services:
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
       - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
       - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+    networks:
+      - ms-network
+
   taskservice-mongodb:
     extends:
       file: mongodb.yml
       service: taskservice-mongodb
-  networks:
-      - ms-network      
+    networks:
+      - ms-network
+    ports:
+      - 27037:27017 
 
 networks:
-  ms-network:
-    name: my-app-net
+    ms-network:
+      name: my-app-net

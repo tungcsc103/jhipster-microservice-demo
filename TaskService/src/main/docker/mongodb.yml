@@ -1,8 +1,8 @@
-version: '2'
+version: '2.4'
 services:
   taskservice-mongodb:
     image: mongo:4.0.10
     ports:
-      - '27017:27017'
+      - '27037:27017'
     # volumes:
     #     - ~/volumes/jhipster/TaskService/mongodb/:/data/db/

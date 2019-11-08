@@ -2,8 +2,6 @@ version: '2.4'
 services:
   statsservice-app:
     image: statsservice
-    networks:
-      - network1
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
@@ -15,15 +13,17 @@ services:
       - JHIPSTER_SLEEP=5 # gives time for other services to boot before the application
       - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
       - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+    networks:
+      - ms-network
   statsservice-mongodb:
     extends:
       file: mongodb.yml
       service: statsservice-mongodb
     networks:
-      - network1
+      - ms-network
     ports:
-      - 27017:27017
+      - 27027:27017
       
 networks:
-    network1:
+    ms-network:
         name: my-app-net
